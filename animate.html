@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Image Cube</title>
+    <style>
+        .scene {
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            transition: transform 2s;
+        }
+
+        .cube img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            backface-visibility: hidden;
+        }
+
+        .front  { transform: translateZ(100px); }
+        .back   { transform: rotateY(180deg) translateZ(100px); }
+        .right  { transform: rotateY(90deg) translateZ(100px); }
+        .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .top    { transform: rotateX(90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <div class="face front"><img src="C:\Users\Administrator\Desktop\Malik Osama Naeem\CL assets\images\Group74.png" alt="Cube Face"></div>
+            <div class="face back"><img src="C:\Users\Administrator\Desktop\Malik Osama Naeem\CL assets\images\Group74.png" alt="Cube Face"></div>
+            <div class="face right"><img src="C:\Users\Administrator\Desktop\Malik Osama Naeem\CL assets\images\Group74.png" alt="Cube Face"></div>
+            <div class="face left"><img src="C:\Users\Administrator\Desktop\Malik Osama Naeem\CL assets\images\Group74.png" alt="Cube Face"></div>
+            <div class="face top"><img src="C:\Users\Administrator\Desktop\Malik Osama Naeem\CL assets\images\Group74.png" alt="Cube Face"></div>
+            <div class="face bottom"><img src="C:\Users\Administrator\Desktop\Malik Osama Naeem\CL assets\images\Group74.png" alt="Cube Face"></div>
+        </div>
+    </div>
+    <script src="animation.js"></script>
+</body>
+</html>
